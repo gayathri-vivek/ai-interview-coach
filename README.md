@@ -1,20 +1,43 @@
-# AI Interview Coach 🤖
+# 🤖 AI Interview Coach
 
-AI-powered platform for technical interview preparation.
+An AI-powered technical interview preparation platform built with Spring Boot and Groq LLM.
 
-## Tech Stack
-- Spring Boot 3.3 + Spring AI
-- Groq LLM (LLaMA 3.1)
-- React + Recharts
-- PostgreSQL + Docker
+## 🚀 Features
+- ✅ AI-generated role-specific interview questions
+- ✅ Intelligent answer evaluation with scoring
+- ✅ Strengths & improvement feedback
+- ✅ Better answer suggestions
+- 🔲 Session history & progress tracking
+- 🔲 React dashboard with score charts
+- 🔲 Docker deployment
 
-## Features (In Progress)
-- ✅ AI question generation by role and difficulty
-- ✅ Answer evaluation with scoring
-- 🔲 Session history and progress tracking
-- 🔲 Performance dashboard
-- 🔲 React frontend
+## 🛠️ Tech Stack
+| Layer | Technology |
+|-------|-----------|
+| Backend | Spring Boot 3.3 |
+| AI Integration | Spring AI + Groq (LLaMA 3.1) |
+| Database | PostgreSQL |
+| Frontend | React (in progress) |
+| Container | Docker |
 
-## Status
-🚧 Active development — backend API working
+## 📡 API Endpoints
 
+### Generate Question
+GET /api/interview/question?role=Java Developer&difficulty=Medium
+
+### Evaluate Answer
+POST /api/interview/evaluate
+{
+  "role": "Java Developer",
+  "question": "your question here",
+  "answer": "your answer here"
+}
+
+## ⚙️ Setup
+1. Clone the repo
+2. Copy application.properties.example → application.properties
+3. Add your Groq API key from console.groq.com
+4. Run: mvnw spring-boot:run
+
+## 📊 Status
+🚧 Backend complete and working | Frontend in progress
